@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="card-content">
+    <div class="card" *ngFor="let user of pagedList ">
+      <div class="card-image"><img [src]="user.avatar" />
+      </div>
+      <div class="card-info">
+        <h3>{{user.first_name}}</h3>
+        <div>
+          <label >Last Name:</label>
+          <label style="margin-left:0.5rem ; font-family:monospace;">{{user.last_name}}</label>
+        </div>
+        <div>
+          <label>Email:</label>
+          <label style="margin-left:0.5rem ; font-family:monospace;">{{user.email}}</label>
+        </div>
+
+      </div>
+      <!-- <button type="button" class="btn btn-outline-info btn-rounded " >
+      Info
+      </button> -->
+      <a mat-button style="font-family:Georgia, 'Times New Roman', Times, serif ;" (click)="openPopup()">Info</a>
+    </div>
+  </div>
+  <mat-paginator [length]="length" #paginator [pageSize]="pageSize" [showFirstLastButtons]="true"
+    (page)="OnPageChange($event)">
+  </mat-paginator>
+
+</div>

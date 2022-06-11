@@ -1,0 +1,22 @@
+<form class="text-center border border-light p-1"  *ngFor="let user of users" >
+    <h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;">User Information</h1>
+    <div class="form-row mb-9  center">
+        <div class="row" style="margin-top: 2.5rem;">
+            <div class="col mb-3">
+                <input type="text"  class="form-control" disabled placeholder="{{user.first_name}}" >
+            </div>
+            <div class="col mb-3">
+                <input type="text"   class="form-control" disabled  placeholder="{{user.last_name}}">
+            </div>
+        </div>
+    </div>
+    <div class="row"  style="margin-top: 2.5rem;">
+        <div class="col mb-3">
+            <input type="email" id="defaultRegisterFormEmail" class="form-control" disabled  placeholder="{{user.email}}">
+        </div>
+        
+    </div>
+    <div class="footer">
+        <button class = "btn btn-outline-danger" style="float:right ; margin-top: 5rem;" >Close</button>
+    </div>
+</form>
